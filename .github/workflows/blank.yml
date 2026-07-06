@@ -5,6 +5,12 @@ on:
       - main
       - development
       - feature/*
+  pull_request:
+    types: opened
+    branches:
+      - main
+      - development
+      - feature/*
 jobs:
   build:
     runs-on: ubuntu-latest
