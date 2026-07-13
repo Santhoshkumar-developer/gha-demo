@@ -10,4 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
-        run: echo "A demo build"
+        run: |
+          echo "A build step is running"
+          echo "This is a ${{vars.MY_NAME}}"
