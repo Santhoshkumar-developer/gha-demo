@@ -13,3 +13,4 @@ jobs:
         run: |
           echo "A build step is running"
           echo "This is a ${{vars.MY_NAME}}"
+          echo "This is a ${{secrets.DOCKER_PASSWORD}}"
