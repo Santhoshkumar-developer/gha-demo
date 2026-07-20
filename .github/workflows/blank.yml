@@ -1,16 +1,10 @@
-name: Hello World
-on:
-  push:
-    branches:
-      - main
-      - development
-      - feature/*
+name: GitHub Action Demo
+on: push
 jobs:
-  build:
+  action-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Build Step
-        run: |
-          echo "A build step is running"
-          echo "This is a ${{vars.MY_NAME}}"
-          echo "This is a ${{secrets.DOCKER_PASSWORD}}"
+      - name: checkout the code
+        uses: actions/checkout@v4
+      - name: print the html
+        run: cd index.html
